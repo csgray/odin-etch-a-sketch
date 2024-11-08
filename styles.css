@@ -6,11 +6,7 @@
 
 #container {
     display: flex;
-    flex-flow: column nowrap;
-}
-
-.row {
-    line-height: 0; /* Removes the gap between rows. */
+    flex-flow: row wrap;
 }
 
 .square {

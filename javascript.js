@@ -1,19 +1,18 @@
 container = document.getElementById("container");
+/* Makes the window a square based on the smaller of height or width. */
+(window.innerWidth < window.innerHeight) ?
+    container.style.height = "100vw" :
+    container.style.width = "100vh"
 
 numberSquares = 16;
-for (r = 0; r < numberSquares; r++) {
-    row = document.createElement("div");
-    row.classList.add("row");
-
-    for (s = 0; s < numberSquares; s++) {
-        square = document.createElement("div");
-        square.classList.add("square");
-        square.style.width = `${Math.floor(100 / numberSquares)}%`
-        row.appendChild(square);
-    }
-
-    container.appendChild(row);
+for (s = 0; s < numberSquares * numberSquares; s++) {
+    square = document.createElement("div");
+    square.classList.add("square");
+    /* Define the squares' dimensions by the smaller of height or width. */
+    (window.innerWidth < window.innerHeight) ?
+        square.style.width = `${Math.floor(100 / numberSquares)}vw` :
+        square.style.height = `${Math.floor(100 / numberSquares)}vh`
+    container.appendChild(square);
 }
-
 
 console.log(`${Math.floor(100 / numberSquares)}%`)
