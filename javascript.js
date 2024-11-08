@@ -1,6 +1,15 @@
 /* Function Definitiions */
+function randomRGB() {
+    red = Math.floor(Math.random() * 255);
+    blue = Math.floor(Math.random() * 255);
+    green = Math.floor(Math.random() * 255);
+    color = `rgb(${red} ${blue} ${green})`;
+    return color;
+}
+
 function colorMe(e) {
-    this.style.backgroundColor = "black";
+    color = randomRGB();
+    this.style.backgroundColor = color;
 }
 
 function generateGrid(squaresPerSide) {
@@ -38,6 +47,9 @@ function getNewGrid(e) {
 }
 
 /* Page Logic */
+header = document.getElementById("header");
+header.style.color = randomRGB();
+
 generateButton = document.getElementById("generate");
 generateButton.addEventListener("click", getNewGrid);
 

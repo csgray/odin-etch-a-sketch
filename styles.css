@@ -28,6 +28,6 @@
 .square {
     display: inline-block;
     aspect-ratio: 1/1;
-    border: 1px solid grey;
-    background-color: lightgrey;
+    border: 1px solid rgb(128, 128, 128, 10%);
+    background-color: white;
 }
