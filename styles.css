@@ -13,4 +13,5 @@
     display: inline-block;
     aspect-ratio: 1/1;
     border: 1px solid grey;
+    background-color: lightgrey;
 }
