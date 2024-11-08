@@ -13,8 +13,8 @@ function generateGrid(squaresPerSide) {
 
         /* Define the squares' dimensions by the smaller of height or width. */
         (window.innerWidth < window.innerHeight) ?
-            square.style.width = `${Math.floor(100 / squaresPerSide)}vw` :
-            square.style.height = `${Math.floor(100 / squaresPerSide)}vh`
+            square.style.width = `${90 / squaresPerSide}vw` :
+            square.style.height = `${90 / squaresPerSide}vh`
 
         square.addEventListener("pointerenter", colorMe);
         container.appendChild(square);
@@ -44,7 +44,7 @@ generateButton.addEventListener("click", getNewGrid);
 container = document.getElementById("container");
 /* Makes the grid a square based on the smaller of height or width. */
 (window.innerWidth < window.innerHeight) ?
-    container.style.height = "100vw" :
-    container.style.width = "100vh"
+    container.style.height = "90vw" :
+    container.style.width = "90vh"
 
 generateGrid(16);
